@@ -7,4 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-Faker::GameOfThrones.quote
+10.times do
+article = Article.new(
+  title: Faker::GameOfThrones.character,
+  content: Faker::GameOfThrones.quote
+  )
+article.save
+end
+
